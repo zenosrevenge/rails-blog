@@ -3928,3 +3928,129 @@ Processing by PostsController#show as HTML
   Rendered comments/_form.html.erb (4.2ms)
   Rendered posts/show.html.erb within layouts/application (7.7ms)
 Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 44ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:36 -0700
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-09-13 23:32:39 -0700
+Processing by PostsController#new as HTML
+Filter chain halted as #<Proc:0xb525e378@/home/dustin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-09-13 23:32:45 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (7.6ms)
+  Rendered posts/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-09-13 23:32:48 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/posts/2" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XsNMOh5yW6+4AR33gtL+n2Qt0V1BzlaOD3LgUhVq5k4=", "id"=>"2"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (65.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 81ms (ActiveRecord: 67.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-09-13 23:32:54 -0700
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-09-13 23:35:03 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (9.1ms)
+  Rendered posts/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-09-13 23:35:06 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.3ms)
